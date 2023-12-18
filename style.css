@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    background: hsl(229, 57%, 11%);
+    background-image: url(./images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+.content{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    /* background: red; */
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+}
+.left-content{
+    height: 180px;
+    background: hsl(228, 56%, 26%);
+    padding: 30px 130px 30px 25px;
+    border-radius: 10px 36% 10px 10px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.icon{ 
+    background: hsl(229, 57%, 11%);
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    margin: 0 15px 0 0;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 25px;
+}
+.icon img{
+    object-fit: cover;
+}
+.right-content{
+    height: 150px;
+    width: 100%;
+    margin: 25px 0 0 20px;
+    background: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    padding: 40px;
+}
+.right-content .text{
+    color: hsl(229, 7%, 55%);
+}
+.right-content .line{
+    position: relative;
+    height: 15px;
+    border-radius: 10px;
+    background: hsl(229, 57%, 11%);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.right-content .line::before{
+    position: absolute;
+    content: '';
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 15px;
+    width: 70%;
+    border-radius: 10px;
+}
+.right-content .line::after{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border-radius: 50%;
+    top: 0;
+    right: 29%;
+}
+.right-content span{
+    color: hsl(243, 100%, 93%);
+}
+.right-content .data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.toggle{
+    position: relative;
+    background: #fff;
+    height: 60px;
+    width: 130px;
+    font-size: 1.6em;
+    font-weight: 700;
+    float: right;
+    margin-top: -90px;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+.toggle span{
+    font-size: 10px;
+    color: hsl(229, 7%, 55%);
+}
+.toggle::before{
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    right: 0;
+    bottom: -30%;
+    /* background: #fff; */
+    border-top: 20px solid transparent;
+    border-right: 20px solid #fff;
+    border-bottom: 20px solid transparent;
+    /* border-left: 20px solid black; */
+    /* border-radius: 0 0 0 90%; */
+}
+@media (max-width: 700px){
+    body{
+        background-image: url(./images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 10px;
+    }
+    .content{
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* background-color: red; */
+    }
+    .left-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        width: 70%;
+        text-align: center;
+        padding: 0px 100px 0px 0px;
+    }
+    .icons{
+        justify-content: space-between;
+    }
+    .icon{ 
+        padding: 10px;
+        margin-left: 5px;
+    }
+    .right-content{
+        position: relative;
+        height: 150px;
+        width: 70%;
+        padding: 40px;
+    }
+    .right-content .data{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        margin-top: 10px;
+        /* background-color: red; */
+        width: 80%;
+        padding: 10px;
+        
+    }
+    .toggle{
+        position: relative;
+        background: #fff;
+        height: 70px;
+        width: 150px;
+        font-size: 2em;
+        font-weight: 700;
+        margin: 0 24%;
+        margin-top: 70px;
+        border-radius: 5px;
+        padding: 15px;
+        text-align: center;
+    }
+    .toggle::before{
+        display: none;
+    }
+}
